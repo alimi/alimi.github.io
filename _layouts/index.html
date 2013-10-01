@@ -1,10 +1,9 @@
-<h1>alimi</h1>
-
-Assuming I have posts...
-
-<ul>
+---
+layout: default
+---
+<ul class='main-content'>
   {% for post in site.posts %}
-    <li>
+    <li class="wrapper">
       <a href="{{ post.url }}">{{ post.title }}</a>
     </li>
  {% endfor %}
