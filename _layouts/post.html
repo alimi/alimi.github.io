@@ -5,6 +5,7 @@ layout: default
 <article class='main-content'>
   <header class="wrapper">
     <h2>{{ page.title }}</h2>
+    <p>on {{ page.date | date: "%A, %B %d, %Y" }}</p>
   </header>
   <section class="wrapper">
     {{ content }}
