@@ -1,0 +1,55 @@
+$column-width-percentage: 100% / 18;
+$default-font-size: 16;
+
+/*
+*
+*  Simple elastic gutters
+*  Assuming gutter width of 1.5em
+*
+*/
+.wrapper {
+  padding: 0 0.75em;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/*
+*
+*  Four-column grid active
+*  ----------------------------------------
+*  Margin   | #  1   2   3   4   |   Margin
+*  5.55555% | %  25  50  75  100 | 5.55555%
+*
+*/
+header, .main-content{
+  margin: 0 $column-width-percentage;
+}
+
+article header {
+  margin: 0 0 1.5em;
+
+  h2 {
+    margin-bottom: 0;
+  }
+
+  p {
+    margin: 0;
+  }
+}
+
+/*
+*
+*  Eight-column grid active
+*  ----------------------------------------------------------------------
+*  Margin   | #  1     2     3     4     5     6     7     8   |   Margin
+*  5.55555% | %  12.5  25.0  37.5  50.0  62.5  75.0  87.5  100 | 5.55555%
+*	
+*
+*/
+@media screen and (min-width: 61.5em) {
+  header, .main-content {
+    margin: 0 $column-width-percentage * 3;
+  }
+}
