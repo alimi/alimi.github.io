@@ -1,5 +1,19 @@
 $column-width-percentage: 100% / 18;
-$default-font-size: 16;
+$base-font-size: 16px;
+$base-line-height: 24px;
+
+body {
+  font-size: #{$base-font-size / $base-font-size}em;
+  line-height: #{$base-line-height / $base-font-size}em;
+}
+
+h1 {
+  $h1-font-size: 2 * $base-font-size;
+  $h1-line-height: $base-line-height * 1.5;
+  font-size: #{$h1-font-size / $base-font-size}em;
+  line-height: #{$h1-line-height / $h1-font-size}em;
+  margin: #{$base-line-height / $h1-font-size}em 0 #{$h1-line-height / $h1-font-size}em;
+}
 
 /*
 *
@@ -23,20 +37,16 @@ $default-font-size: 16;
 *  5.55555% | %  25  50  75  100 | 5.55555%
 *
 */
-header, .main-content{
+header, .main-content {
   margin: 0 $column-width-percentage;
 }
 
 article header {
-  margin: 0 0 1.5em;
+  margin: 0;
+}
 
-  h2 {
-    margin-bottom: 0;
-  }
-
-  p {
-    margin: 0;
-  }
+p {
+  margin-bottom: #{$base-line-height / $base-font-size}em;
 }
 
 /*
@@ -48,7 +58,7 @@ article header {
 *	
 *
 */
-@media screen and (min-width: 61.5em) {
+@media screen and (min-width: #{984px / $base-font-size}em) {
   header, .main-content {
     margin: 0 $column-width-percentage * 3;
   }
