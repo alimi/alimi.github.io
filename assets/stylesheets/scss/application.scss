@@ -20,7 +20,7 @@ h1 {
 }
 
 a {
-  color: #62236b;
+  color: #51007a;
   text-decoration: none;
 
   &.twitter:before {
@@ -30,6 +30,10 @@ a {
   &.github:before {
     content: url(/assets/images/GitHub-Mark-16px.png) " ";
   }
+}
+
+ul {
+  list-style: none;
 }
 
 /*
@@ -85,6 +89,12 @@ article {
 
   p {
     padding: 0;
+  }
+}
+
+ul {
+  header {
+    margin: 0;
   }
 }
 
