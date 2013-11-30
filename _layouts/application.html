@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
+    {% if page.title == 'alimi' %}
+      <title>ali blogs</title>
+    {% else %}
+      <title>ali blogs: {{ page.title }}</title>
+    {% endif %}
     <link href="/assets/stylesheets/normalize.css" type="text/css" rel="stylesheet"/>
     <link href="/assets/stylesheets/reset.css" type="text/css" rel="stylesheet"/>
     <link href="/assets/stylesheets/GGS.css" type="text/css" rel="stylesheet"/>
@@ -9,6 +14,7 @@
     {% if site.env == 'DEV' %}
       <script type="text/javascript" src="/assets/javascripts/GGS.js"></script>
     {% endif %}
+    <meta name='viewport' content='initial-scale=1.0, user-scalable=no'>
   </head>
   <body>
     <header class="wrapper">
