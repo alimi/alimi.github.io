@@ -36,6 +36,10 @@ ul {
   list-style: none;
 }
 
+footer {
+  margin-bottom: #{$base-line-height / $base-font-size}em;
+}
+
 /*
 *
 *  Simple elastic gutters

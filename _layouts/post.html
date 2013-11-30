@@ -7,7 +7,13 @@ layout: application
     <h2>{{ page.title }}</h2>
     <p>on {{ page.date | date: "%A, %B %d, %Y" }}</p>
   </header>
+
   <section class="wrapper">
     {{ content }}
+    <p><a href="/index.html">Back</a></p>
   </section>
+
+  <footer id="comments" class="wrapper">
+    {% include comments.html %}
+  </footer>
 </article>

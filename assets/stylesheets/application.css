@@ -20,6 +20,9 @@ a {
 ul {
   list-style: none; }
 
+footer {
+  margin-bottom: 1.5em; }
+
 /*
 *
 *  Simple elastic gutters
