@@ -36,7 +36,7 @@ ul {
   list-style: none;
 }
 
-footer {
+p, div, footer {
   margin-bottom: #{$base-line-height / $base-font-size}em;
 }
 
@@ -100,10 +100,6 @@ ul {
   header {
     margin: 0;
   }
-}
-
-p {
-  margin-bottom: #{$base-line-height / $base-font-size}em;
 }
 
 /*
