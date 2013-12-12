@@ -36,7 +36,7 @@ ul {
   list-style: none;
 }
 
-p, div, footer {
+p, footer {
   margin-bottom: #{$base-line-height / $base-font-size}em;
 }
 
@@ -62,32 +62,30 @@ p, div, footer {
 *  5.55555% | %  25  50  75  100 | 5.55555%
 *
 */
-header, .main-content {
+header, .main-content, footer {
   margin: 0 $column-width-percentage;
   clear: both;
 }
 
+.wrapper, .left, .right {
+  float: left;
+}
+
 header {
-  img {
-    float: left;
+  div.left {
+    margin-top: #{$base-line-height / $base-font-size}em;
+    margin-bottom: #{$base-line-height / $base-font-size}em;
+    * { margin: 0; }
   }
 
-  section {
-    h1 { margin: 0; }
-    p { margin: 0; }
-    img { margin: 0; }
-
-    $header-img-height: 72px;
-
-    margin-top: #{(2 * $base-line-height)/ $base-font-size}em;
-    margin-bottom: #{$header-img-height / $h1-font-size}em;
-    padding-left: #{($header-img-height / $base-font-size) +
-      0.5 * ($gutter-width / $base-font-size)}em;
+  div.right {
+    margin-bottom: #{$base-line-height / $base-font-size}em;
+    * { margin: 0; }
   }
 }
 
 article {
-  header {
+  header, footer {
     margin: 0;
   }
 
@@ -102,6 +100,19 @@ ul {
   }
 }
 
+div.highlight {
+  margin-bottom: #{$base-line-height / $base-font-size}em;
+}
+
+@media screen and (min-width: #{456px / $base-font-size}em) {
+  header {
+    div.left, div.right {
+      margin-top: #{2 * ($base-line-height / $base-font-size)}em;
+      margin-bottom: #{$base-line-height / $base-font-size}em;
+    }
+  }
+}
+
 /*
 *
 *  Eight-column grid active
@@ -112,7 +123,7 @@ ul {
 *
 */
 @media screen and (min-width: #{984px / $base-font-size}em) {
-  header, .main-content {
+  header, .main-content, footer {
     margin: 0 $column-width-percentage * 3;
   }
 }

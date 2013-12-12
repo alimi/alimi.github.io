@@ -2,9 +2,9 @@
 <html>
   <head>
     {% if page.title == 'alimi' %}
-      <title>ali blogs</title>
+      <title>ali ibrahim blogs</title>
     {% else %}
-      <title>ali blogs: {{ page.title }}</title>
+      <title>ali ibrahim blogs: {{ page.title }}</title>
     {% endif %}
     <link href="/assets/stylesheets/normalize.css" type="text/css" rel="stylesheet"/>
     <link href="/assets/stylesheets/reset.css" type="text/css" rel="stylesheet"/>
@@ -17,19 +17,30 @@
     <meta name='viewport' content='initial-scale=1.0, user-scalable=no'>
   </head>
   <body>
-    <header class="wrapper">
-      <img src="/assets/images/ali_small.jpg">
-      <section>
-        <h1>ali ibrahim</h1>
-        <p><i>ah-lee ih-brah-him or ah-lee-e-brah-heem</i></p>
-        <a href='https://twitter.com/alimeye' class="twitter" target="_blank">
-          alimeye
-        </a>
-        <a href='https://github.com/alimi' class="github" target="_blank">
-          alimi
-        </a>
-      </section>
+    <header>
+      <div class="wrapper left">
+        <img src="/assets/images/ali_small.jpg">
+      </div>
+      <div class="wrapper right">
+        <h1>ali ibrahim blogs</h1>
+        <p>
+          <i>ah-lee i-brah-him or ah-lee-e-brah-heem</i>
+        </p>
+        <p>
+          <a href='https://twitter.com/alimeye' class="twitter" target="_blank">
+            alimeye
+          </a>
+          <a href='https://github.com/alimi' class="github" target="_blank">
+            alimi
+          </a>
+        </p>
+      </div>
     </header>
+
     {{ content }}
+
+    <footer class="wrapper">
+      <p>&#169; Ali Ibrahim {{ site.time | date : '%Y' }}</p>
+    </footer>
   </body>
 </html>
