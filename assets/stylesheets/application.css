@@ -57,25 +57,25 @@ header div.left {
   header div.left * {
     margin: 0; }
 header div.right {
-  margin-bottom: 1.5em; }
+  margin-bottom: 2.25em; }
   header div.right * {
     margin: 0; }
+header img {
+  vertical-align: bottom; }
 
 article header, article footer {
   margin: 0; }
 article p {
   padding: 0; }
 
-ul header {
-  margin: 0; }
-
 div.highlight {
   margin-bottom: 1.5em; }
 
 @media screen and (min-width: 28.5em) {
   header div.left, header div.right {
-    margin-top: 3em;
-    margin-bottom: 1.5em; } }
+    margin-top: 3em; }
+  header div.right {
+    margin-bottom: 2.25em; } }
 /*
 *
 *  Eight-column grid active

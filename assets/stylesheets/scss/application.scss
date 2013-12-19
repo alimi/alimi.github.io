@@ -5,6 +5,7 @@ $gutter-width: 24px;
 
 $h1-font-size: 2 * $base-font-size;
 $h1-line-height: $base-line-height * 1.5;
+$h1-line-height-overflow: $h1-line-height - $base-line-height;
 
 body {
   background-color: #fbfaf5;
@@ -79,8 +80,12 @@ header {
   }
 
   div.right {
-    margin-bottom: #{$base-line-height / $base-font-size}em;
+    margin-bottom: #{($base-line-height + $h1-line-height-overflow) / $base-font-size}em;
     * { margin: 0; }
+  }
+
+  img {
+    vertical-align: bottom;
   }
 }
 
@@ -94,12 +99,6 @@ article {
   }
 }
 
-ul {
-  header {
-    margin: 0;
-  }
-}
-
 div.highlight {
   margin-bottom: #{$base-line-height / $base-font-size}em;
 }
@@ -108,7 +107,10 @@ div.highlight {
   header {
     div.left, div.right {
       margin-top: #{2 * ($base-line-height / $base-font-size)}em;
-      margin-bottom: #{$base-line-height / $base-font-size}em;
+    }
+
+    div.right {
+      margin-bottom: #{($base-line-height + $h1-line-height-overflow) / $base-font-size}em;
     }
   }
 }
