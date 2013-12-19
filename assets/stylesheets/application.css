@@ -48,7 +48,7 @@ header, .main-content, footer {
   margin: 0 5.55556%;
   clear: both; }
 
-.wrapper, .left, .right {
+.left, .right {
   float: left; }
 
 header div.left {
