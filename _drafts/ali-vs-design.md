@@ -5,7 +5,7 @@ categories: dev
 tags: golden-grid-system design ui
 ---
 When I think of design as it relates to the internet, I think of the
-interactions users have with software.  [Some sites][1] do a really great job of
+interactions users will experience.  [Some sites][1] do a really great job of
 concisely presenting information to the user.  And [they][2] work well on
 screens that are way to big or a little too small.  With this in mind, I wanted
 to learn more about desiging for the web.
@@ -54,9 +54,8 @@ In addition to the baseline grid, the Golden Grid System also introduces a
 zoomable baseline grid.  Since everything in my stylesheet is defined in ems,
 font sizes can adjust as the screen size changes and everything should
 change proportionately (except for a few rounding errors).  I didn't try to
-implement a zoomable baseline grid when I didn't really know how to implement a
-baseline grid.  It's kinda like [going for that first jump on skis when you just
-got off the bunny hill][6].  Something to try later, I guess.
+implement a zoomable baseline grid because [I had just learned baseline grids
+were a thing][6].  Something to try later, I guess.
 
 The other big piece to the Golden Grid System are elastic gutters.  Gutters
 represent the space between columns.  The gutters in the Golden Grid System are
@@ -74,9 +73,72 @@ centering my content between the two gutters.
 
 *Gutter Drawing in Journal*
 
+That's the jist of the Golden Grid System...as I understand it anyways.  Take a
+look at the Golden Grid System's [website][4] and play around with it.  There's
+a hamburger menu in the top right corner; this is the Golden Gridlet.  It's a
+little bit of JavaScript that overlays a basic grid layout on top of the page.
+Its useful for seeing how things fit within the grid.  It used it a lot when I
+was building this blog.
+
+Now that everyone nows what the Golden Grid System is, we can take a look at
+what I came up with.
+
+[Here][7] is the blog's main stylesheet.  It's written using Sass
+[(Sass makes this whole thing tolerable)][8].  They stylesheet starts with a lot
+of variables and presets.  Scroll a little further and you'll see the
+[wrapper][9] and the [first gird sighting][10].  The first layout I define is
+the four column layout because I'm desiging [Mobile First&#8482;][11].  The four
+column layout will generally be pretty simple because there's only so much you
+can do with limited space.  Shrink your browser window and inspect the blog's
+html (go ahead, [I'll wait][12]).  Compare it to the stylesheet so far and
+you'll see there's not a lot of magic going on.  Things get a little more
+interesting when you make your window bigger (I would tell you to make it
+bigger, but [I know you never shrank it to begin with][13]).
+
+The first thing you'll notice is a change in the header.  The text will move
+from bellow my beautiful face and line up magically next to me.  I split the
+content of my header into left and right divs; left for me and right for the
+text.  Since I defined each element to float left, they will naturally sit next
+to each other.  The header should appear misaligned given [my header rules][14],
+but it doesn't thanks to magic of [CSS media queries][15].  You can see [media
+queries in action][16] towards the end of the four column layout definition. The
+margins of both the left and right header divs change so the divs will be
+aligned when they are sitting next to each other.  That happens when the screen
+is wider than 455 px.
+
+Media queries are used again to define the [eight column layout][17].  984 px is
+my arbriatry breakpoint when the eight column layout will be used.  Now that I
+have more space, my content doesn't need take up so much of the screen and I can
+add few more columns to the outside margins.
+
+I skipped over designing a  16 column layout.  I'm not using a large enough
+screen, so it would be hard for me to design.  I also doubt you'll be reading
+this on your living room TV.
+
+...and that's my stylesheet!
+
+The blog's design is pretty simple, and [that's by design][18].  The most
+important thing on a blog are the posts. If nothing else, they should be
+legible.  I think I accomplished that with this design.  Please let me know if
+I'm wrong.  Seriously.  If you missed the disclaimer earlier, I'm not a
+designer.  [I'm flying by the seat of my pants][19]!
+
 [1]: http://forecast.io
 [2]: http://www.bulletsforever.com
 [3]: http://stormyflower.com
 [4]: http://goldengridsystem.com
 [5]: http://alistapart.com/article/settingtypeontheweb
-[6]: http://www.uproxx.com/wp-content/uploads/2013/02/ski-jump-fail-gif.gif
+[6]: http://media.tumblr.com/b5e946fd3c44fb224930594d79dc4e32/tumblr_inline_mo94a32ccO1qz4rgp.gif
+[7]: https://github.com/alimi/alimi.github.io/blob/master/assets/stylesheets/scss/application.scss
+[8]: http://sass-lang.com/guide
+[9]: https://github.com/alimi/alimi.github.io/blob/master/assets/stylesheets/scss/application.scss#L44:L56
+[10]: https://github.com/alimi/alimi.github.io/blob/master/assets/stylesheets/scss/application.scss#L58:L65
+[11]: https://www.google.com/search?q=mobile+first
+[12]: http://memecrunch.com/meme/7FX7/still-waiting/image.png
+[13]: http://www.youtube.com/watch?v=oavMtUWDBTM
+[14]: https://github.com/alimi/alimi.github.io/blob/master/assets/stylesheets/scss/application.scss#L75:L90
+[15]: https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Media_queries
+[16]: https://github.com/alimi/alimi.github.io/blob/master/assets/stylesheets/scss/application.scss#L106:L116
+[17]: https://github.com/alimi/alimi.github.io/blob/master/assets/stylesheets/scss/application.scss#L118
+[18]: http://www.youtube.com/watch?v=obKLdou0LH0
+[19]: http://blog.wfmu.org/.a/6a00d83451c29169e20168e8116d94970c-800wi
