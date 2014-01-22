@@ -1,1 +1,2 @@
 env: DEV
+permalink: /:year/:month/:day/:title.html

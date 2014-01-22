@@ -71,6 +71,9 @@ article p {
 div.highlight {
   margin-bottom: 1.5em; }
 
+p img {
+  max-width: 100%; }
+
 @media screen and (min-width: 28.5em) {
   header div.left, header div.right {
     margin-top: 3em; }

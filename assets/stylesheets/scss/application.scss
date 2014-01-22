@@ -103,6 +103,12 @@ div.highlight {
   margin-bottom: #{$base-line-height / $base-font-size}em;
 }
 
+p {
+  img {
+    max-width: 100%;
+  }
+}
+
 @media screen and (min-width: #{456px / $base-font-size}em) {
   header {
     div.left, div.right {
