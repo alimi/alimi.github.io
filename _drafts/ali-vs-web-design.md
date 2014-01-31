@@ -7,7 +7,7 @@ tags: golden-grid-system design ui
 When I think of design as it relates to the internet, I think of the
 interactions users will experience.  [Some sites][1] do a really great job of
 concisely presenting information to the user.  And [they][2] work well on
-screens that are way to big or a little too small.  With this in mind, I wanted
+screens that are way too big or a little too small.  With this in mind, I wanted
 to learn more about desiging for the web.
 
 **Disclaimer:  I am not a designer.  Continue reading at your own risk...or
@@ -118,9 +118,9 @@ this on your living room TV.
 ...and that's my stylesheet!
 
 The blog's design is pretty simple, and [that's by design][21].  The most
-important thing on a blog are the posts. If nothing else, they should be
-legible.  I think I accomplished that with this design.  Please let me know if
-I'm wrong.  Seriously.  If you missed the disclaimer earlier, I'm not a
+important thing on a blog are the posts.  If nothing else, they should be
+legible.  I think I accomplished that with this design, but please let me know
+if I'm wrong.  Seriously.  If you missed the disclaimer earlier, I'm not a
 designer.  [I'm flying by the seat of my pants][22]!
 
 [1]: http://forecast.io
