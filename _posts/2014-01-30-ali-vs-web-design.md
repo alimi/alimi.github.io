@@ -87,7 +87,7 @@ what I came up with.
 [(Sass makes this whole thing tolerable)][11].  The stylesheet starts with a lot
 of variables and presets.  Scroll a little bit and you'll see the [wrapper][12]
 and the [first gird sighting][13].  The first layout I define is the four column
-layout because I'm desiging [Mobile First][14].  The four column layout
+layout because I'm desiging [Mobile First&#8482;][14].  The four column layout
 will generally be pretty simple because there's only so much you can do with
 limited space.  Shrink your browser window and inspect the blog's html (go
 ahead, [I'll wait][15]).  Compare it to the stylesheet so far and you'll see
