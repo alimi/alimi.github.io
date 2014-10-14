@@ -2,7 +2,7 @@
 layout: post
 title: Ali vs The Rails Asset Pipeline
 categories: dev
-tags: golden-grid-system design ui
+tags: rails asset-pipeline
 ---
 Your hero has been missing for some time, but it's not because he wasn't busy
 fighting battles. I was gone in a far away land fighting the [Rails Asset
